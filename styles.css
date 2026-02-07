@@ -797,3 +797,185 @@ img {
 }
 
 /* ===== END HEADER/GUIDE PATCH (PowerShell) ===== */
+
+
+
+
+/* ===== BEGIN GUIDE DIVIDER NAV (PowerShell) ===== */
+.guide-subnav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 0;
+  padding: 0.35rem 0;
+  margin-top: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.guide-subnav a {
+  color: var(--granite);
+  text-decoration: none;
+  font-weight: 500;
+  padding-right: 0.8rem;
+  margin-right: 0.8rem;
+  border-right: 1px solid rgba(74, 85, 104, 0.25);
+}
+
+.guide-subnav a:hover {
+  color: var(--pine);
+}
+
+.guide-subnav a.active,
+.guide-subnav a[aria-current="page"] {
+  color: var(--pine);
+  font-weight: 700;
+}
+
+.guide-subnav a:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* Optional: make the mobile scrollbar subtle */
+.guide-subnav::-webkit-scrollbar { height: 6px; }
+.guide-subnav::-webkit-scrollbar-track { background: transparent; }
+.guide-subnav::-webkit-scrollbar-thumb {
+  background: rgba(74, 85, 104, 0.20);
+  border-radius: 999px;
+}
+/* ===== END GUIDE DIVIDER NAV (PowerShell) ===== */
+
+
+
+/* ===== BEGIN GUIDE TWO-ROW HEADER (PowerShell) ===== */
+
+/* Make the main header truly sticky */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Guide pages: 2-row header stack */
+.header.guide-header .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ROW 1: site nav */
+.header.guide-header .header-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) 0;
+  gap: var(--spacing-3);
+}
+
+/* enlarge site title ~20% */
+.header.guide-header .logo {
+  font-size: 1.38rem;
+}
+
+/* right side: nav + book now */
+.header.guide-header .nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+/* ensure Book Now is the only pill look */
+.header.guide-header .nav .btn {
+  border-radius: 999px;
+}
+
+/* Book Now dark pill, white text */
+.header.guide-header .nav .btn,
+.header.guide-header .nav .btn.btn-primary {
+  background: var(--pine);
+  color: var(--mist);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: var(--shadow);
+}
+.header.guide-header .nav .btn:hover,
+.header.guide-header .nav .btn.btn-primary:hover {
+  background: #15231f;
+}
+
+/* ROW 2: guide ribbon */
+.header.guide-header .guide-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); /* this is the freeze-point line */
+  color: var(--granite);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+
+/* guide ribbon links: NOT pills */
+.header.guide-header .guide-ribbon a {
+  color: var(--granite);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.15rem 0;
+}
+
+/* active section underline */
+.header.guide-header .guide-ribbon a.active,
+.header.guide-header .guide-ribbon a[aria-current="page"] {
+  color: var(--pine);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+/* vertical dividers like: A | B | C */
+.header.guide-header .guide-ribbon .divider {
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: rgba(74,85,104,0.35);
+  margin: 0 0.6rem;
+  transform: translateY(1px);
+}
+
+/* mobile menu behavior (keep your existing navToggle styles working) */
+@media (max-width: 780px) {
+  .header.guide-header .header-row1 {
+    padding: 12px 0;
+  }
+
+  /* keep Menu button visible */
+  .header.guide-header .navToggle {
+    display: inline-block;
+  }
+
+  /* dropdown nav menu on mobile (if your existing CSS does this, leave it) */
+  .header.guide-header .nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 56px;
+    background: var(--surface);
+    padding: 14px var(--pad);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 60;
+  }
+  .header.guide-header .nav.open { display: flex; }
+
+  /* keep Book Now visible in the dropdown on mobile too */
+  .header.guide-header .nav .btn { display: inline-flex; }
+}
+
+/* ===== END GUIDE TWO-ROW HEADER (PowerShell) ===== */
