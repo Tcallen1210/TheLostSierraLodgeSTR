@@ -1,42 +1,137 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Lost Sierra Lodge | Guide</title>
-  <meta name="description" content="Guide at The Lost Sierra Lodge." />
-  <meta property="og:title" content="The Lost Sierra Lodge | Guide" />
-  <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="../styles.css" />
-</head>
-<body>
-  <header class="header">
-    <a class="logo" href="../index.html">The Lost Sierra Lodge</a>
-    <button class="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="nav">
-      <a href="stay.html">Stay</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="guide.html">Guide</a>
-      <a href="policies.html">Policies</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn" href="book.html">Book Now</a>
-    </nav>
-  </header>
-  <main>
-    <section class="section">
-      <h1>Guide</h1>
-      <p>Edit this page in <code>pages/guide.html</code>.</p>
-
-      <div class="section cta">
-        <h2>Ready to book?</h2>
-        <p>Check availability and lock in your dates.</p>
-        <a class="btn" href="book.html">Book Now</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guide | The Lost Sierra Lodge</title>
+    <meta
+      name="description"
+      content="Plan your Lost Sierra getaway with recommendations for Portola, Graeagle, hiking, and dining."
+    />
+    <meta property="og:title" content="Guide | The Lost Sierra Lodge" />
+    <meta
+      property="og:description"
+      content="Local guide to Portola, Graeagle, Lake Davis, and outdoor adventures." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thelostsierralodge.com/pages/guide.html" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="logo" href="../index.html">The Lost Sierra Lodge</a>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+        <nav class="nav-menu" id="site-nav" data-nav-menu>
+          <div class="nav-links">
+            <a href="stay.html">Stay</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="guide.html">Guide</a>
+            <a href="policies.html">Policies</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <a class="btn btn-primary" href="book.html">Book Now</a>
+        </nav>
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <small>© <span id="year"></span> The Lost Sierra Lodge</small>
-  </footer>
-  <script src="../script.js"></script>
-</body>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <span class="badge">Local Favorites</span>
+          <h1 class="section-title">The Lost Sierra Insider — Curated recommendations from the Allen Family</h1>
+          <p class="section-lead">
+            A local tourism hub for dining, golf, adventures, and wedding venues close to the lodge.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" style="background: #ffffff;">
+        <div class="container grid-3">
+          <article class="card">
+            <h3>Eat &amp; Drink</h3>
+            <ul class="prose" style="list-style: disc; padding-left: 1.25rem;">
+              <li>The Brewing Lair</li>
+              <li>Eureka Peak Brewing</li>
+              <li>Ronin Fermentation Project</li>
+              <li>Cuccia&apos;s</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Golf</h3>
+            <ul class="prose" style="list-style: disc; padding-left: 1.25rem;">
+              <li>Grizzly Ranch</li>
+              <li>The Dragon at Nakoma</li>
+              <li>Whitehawk Ranch</li>
+              <li>Graeagle Meadows</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Adventure</h3>
+            <ul class="prose" style="list-style: disc; padding-left: 1.25rem;">
+              <li>Lakes Basin</li>
+              <li>Fishing</li>
+              <li>Winter: Longboard Races at Johnsville Ski Bowl</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="card">
+            <h3>Wedding Venues Nearby</h3>
+            <ul class="prose" style="list-style: disc; padding-left: 1.25rem;">
+              <li>Chalet View Lodge</li>
+              <li>Twenty Mile House</li>
+              <li>The Corner Barn</li>
+              <li>Nakoma Resort</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container cta-inner">
+          <div>
+            <span class="badge">Ready to book?</span>
+            <h2>Reserve your Lost Sierra getaway.</h2>
+            <p>Lock in your dates with instant confirmation and direct host support.</p>
+          </div>
+          <a class="btn btn-primary" href="book.html">Book Now</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">The Lost Sierra Lodge</p>
+          <p>123 Mountain Pine Road</p>
+          <p>Portola, CA 96122</p>
+          <p>(530) 555-0123</p>
+        </div>
+        <div>
+          <p class="footer-title">Explore</p>
+          <a href="stay.html">Stay</a><br />
+          <a href="gallery.html">Gallery</a><br />
+          <a href="guide.html">Guide</a><br />
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <p class="footer-title">Contact</p>
+          <p><a href="mailto:hello@thelostsierralodge.com">hello@thelostsierralodge.com</a></p>
+          <p>Instagram: @thelostsierralodge</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 The Lost Sierra Lodge</div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
 </html>
