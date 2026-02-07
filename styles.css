@@ -681,3 +681,119 @@ img {
     min-height: 260px;
   }
 }
+/* Social icon buttons inside place-actions */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--granite);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.social-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  color: var(--pine);
+  background: rgba(243, 244, 246, 0.9);
+}
+
+.social-btn.instagram:hover {
+  background: rgba(212, 163, 115, 0.22);
+}
+
+.social-btn.facebook:hover {
+  background: rgba(28, 46, 42, 0.14);
+}
+
+/* Optional: hours block polish */
+.place-desc .hours {
+  margin-bottom: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  background: rgba(212, 163, 115, 0.15);
+  border: 1px solid rgba(74, 85, 104, 0.2);
+}
+
+
+
+
+/* ===== BEGIN HEADER/GUIDE PATCH (PowerShell) ===== */
+
+/* Make the site title ~20% larger (site-wide) */
+.logo {
+  font-size: 1.38rem;
+}
+
+/* Mobile-only header Book Now button (left of Menu) */
+.header-book {
+  margin-left: auto;
+}
+
+/* Book Now inverted colors: dark button, white text */
+.btn.btn-primary {
+  background: var(--pine);
+  color: var(--mist);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn.btn-primary:hover {
+  background: #15231f;
+  color: var(--mist);
+}
+
+/* Keep spacing tidy in header on mobile */
+.navToggle {
+  margin-left: 0.6rem;
+}
+
+/* Desktop: hide the mobile header-book, keep nav Book Now */
+@media (min-width: 768px) {
+  .header-book {
+    display: none;
+  }
+}
+
+/* Mobile: hide the Book Now inside the dropdown nav so you only see the header one */
+@media (max-width: 780px) {
+  .nav .btn {
+    display: none;
+  }
+}
+
+/* Guide chips spacing polish */
+.guide-subnav {
+  margin-top: 0.9rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Soften horizontal scrollbar look (Chromium/WebKit) */
+.guide-subnav::-webkit-scrollbar {
+  height: 8px;
+}
+
+.guide-subnav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.guide-subnav::-webkit-scrollbar-thumb {
+  background: rgba(74, 85, 104, 0.25);
+  border-radius: 999px;
+}
+
+/* Tighten hero title spacing so chips sit closer to heading */
+.section .hero-title {
+  margin-bottom: 0.8rem;
+}
+
+/* ===== END HEADER/GUIDE PATCH (PowerShell) ===== */
