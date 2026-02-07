@@ -470,3 +470,116 @@ img {
   max-width: 40ch;
 }
 
+
+
+
+
+
+/* =========================
+   Guide hub + category chips
+   ========================= */
+
+.guide-subnav {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 2px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.guide-subnav::-webkit-scrollbar { display: none; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.7);
+  color: var(--pine);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.chip:hover { transform: translateY(-1px); }
+.chip.active {
+  background: var(--pine);
+  color: var(--mist);
+  border-color: var(--pine);
+}
+
+/* Photo-style category cards */
+.guide-card-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .guide-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 980px) {
+  .guide-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.guide-card {
+  position: relative;
+  min-height: 220px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.guide-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.00) 30%, rgba(0,0,0,0.55) 100%);
+  color: #fff;
+}
+.guide-card__overlay h2 {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.35rem;
+  margin: 0 0 6px;
+}
+.guide-card__overlay p {
+  margin: 0;
+  opacity: 0.95;
+  max-width: 40ch;
+}
+
+/* Place-card layout for category pages */
+.place-card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+@media (min-width: 860px) {
+  .place-card { grid-template-columns: 320px 1fr; align-items: start; }
+}
+.place-media {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.place-media img { width: 100%; height: auto; display: block; }
+.place-body h2 {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.35rem;
+  margin: 0 0 8px;
+}
+.place-body p { margin: 0 0 10px; color: var(--granite); }
+.place-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
