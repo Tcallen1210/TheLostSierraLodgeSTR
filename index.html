@@ -1,155 +1,308 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Lost Sierra Lodge | Mountain-modern stays in Portola</title>
-    <meta
-      name="description"
-      content="The Lost Sierra Lodge offers mountain-modern stays in Portola with direct booking, curated local guides, and easy access to Graeagle and the Lost Sierra."
-    />
-    <meta property="og:title" content="The Lost Sierra Lodge" />
-    <meta
-      property="og:description"
-      content="Direct-book mountain-modern lodging in Portola with curated guides for the Lost Sierra." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://thelostsierralodge.com/" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@500;600;700&display=swap"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header-inner">
-        <a class="logo" href="index.html">The Lost Sierra Lodge</a>
-        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
-          Menu
-        </button>
-        <nav class="nav-menu" id="site-nav" data-nav-menu>
-          <div class="nav-links">
-            <a href="pages/stay.html">Stay</a>
-            <a href="pages/gallery.html">Gallery</a>
-            <a href="pages/guide.html">Guide</a>
-            <a href="pages/policies.html">Policies</a>
-            <a href="pages/contact.html">Contact</a>
-          </div>
-          <a class="btn btn-primary" href="pages/book.html">Book Now</a>
-        </nav>
-      </div>
-    </header>
+/* Lost Sierra Lodge static styles */
+:root {
+  --pine: #1c2e2a;
+  --saddle: #d4a373;
+  --granite: #4a5568;
+  --mist: #f3f4f6;
+  --text: #1b2421;
+  --surface: #ffffff;
+  --border: rgba(74, 85, 104, 0.2);
+  --shadow: 0 18px 40px rgba(28, 46, 42, 0.12);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --max-width: 1100px;
+  --spacing-1: 0.5rem;
+  --spacing-2: 0.75rem;
+  --spacing-3: 1rem;
+  --spacing-4: 1.5rem;
+  --spacing-5: 2rem;
+  --spacing-6: 3rem;
+  --spacing-7: 4.5rem;
+}
 
-    <main>
-      <section class="section">
-        <div class="container hero">
-          <div class="hero-card">
-            <span class="badge">Direct booking now open</span>
-            <h1 class="hero-title">Your Basecamp for Connection in the Lost Sierra.</h1>
-            <p class="section-lead">
-              Luxury log cabin living, minutes from Portola and Graeagle. Built for groups,
-              weddings, and unforgettable mountain memories.
-            </p>
-            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a class="btn btn-primary" href="pages/book.html">Book Now</a>
-              <a class="btn btn-secondary" href="pages/stay.html">Explore stays</a>
-            </div>
-          </div>
-          <div class="hero-image" aria-label="Mountain lodge view"></div>
-        </div>
-      </section>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-      <section class="section">
-        <div class="container">
-          <h2 class="section-title">Gather, celebrate, and unwind together</h2>
-          <p class="section-lead">
-            Welcome to The Lost Sierra Lodge. Whether you're reuniting with family, traveling with
-            friends, or attending a wedding at Chalet View, our home is designed for connection.
-            Dog-friendly, loaded with amenities, and rooted in local history since the 1800s.
-          </p>
-          <div class="grid-3" style="margin-top: 2rem;">
-            <article class="card">
-              <h3>Stay cozy</h3>
-              <p>Warm wood interiors, soft lighting, and inviting gathering spaces.</p>
-            </article>
-            <article class="card">
-              <h3>Celebrate together</h3>
-              <p>Perfect for wedding weekends, retreats, and memorable family milestones.</p>
-            </article>
-            <article class="card">
-              <h3>Explore the region</h3>
-              <p>Quick access to Portola, Graeagle, and the iconic Lost Sierra scenery.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+body {
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  background: var(--mist);
+  color: var(--text);
+  line-height: 1.65;
+}
 
-      <section class="section" style="background: #ffffff;">
-        <div class="container split">
-          <div>
-            <span class="badge">Location</span>
-            <h2 class="section-title">Minutes from Portola &amp; Graeagle</h2>
-            <div class="prose">
-              <p>
-                Spend your mornings on Lake Davis, afternoons exploring the Lakes Basin, and
-                evenings reconnecting around the fire. The lodge sits at the center of it all.
-              </p>
-              <p>
-                Let us help you craft a weekend itinerary with dining, outdoor adventures, and
-                unforgettable scenery.
-              </p>
-            </div>
-            <div style="margin-top: 1.5rem;">
-              <a class="btn btn-accent" href="pages/guide.html">Browse the guide</a>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Highlights nearby</h3>
-            <ul class="prose" style="list-style: disc; padding-left: 1.25rem;">
-              <li>Lake Davis sunrise paddles and fishing access.</li>
-              <li>Graeagle dining, live music, and seasonal markets.</li>
-              <li>Sierra Buttes hiking and panoramic ridge views.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-      <section class="cta">
-        <div class="container cta-inner">
-          <div>
-            <span class="badge">Ready to book?</span>
-            <h2>Reserve your Lost Sierra getaway.</h2>
-            <p>Lock in your dates with instant confirmation and direct host support.</p>
-          </div>
-          <a class="btn btn-primary" href="pages/book.html">Book Now</a>
-        </div>
-      </section>
-    </main>
+img {
+  max-width: 100%;
+  border-radius: var(--radius-md);
+  display: block;
+}
 
-    <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <p class="footer-title">The Lost Sierra Lodge</p>
-          <p>123 Mountain Pine Road</p>
-          <p>Portola, CA 96122</p>
-          <p>(530) 555-0123</p>
-        </div>
-        <div>
-          <p class="footer-title">Explore</p>
-          <a href="pages/stay.html">Stay</a><br />
-          <a href="pages/gallery.html">Gallery</a><br />
-          <a href="pages/guide.html">Guide</a><br />
-          <a href="pages/contact.html">Contact</a>
-        </div>
-        <div>
-          <p class="footer-title">Contact</p>
-          <p><a href="mailto:hello@thelostsierralodge.com">hello@thelostsierralodge.com</a></p>
-          <p>Instagram: @thelostsierralodge</p>
-        </div>
-      </div>
-      <div class="footer-bottom">© 2025 The Lost Sierra Lodge</div>
-    </footer>
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+}
 
-    <script src="script.js"></script>
-  </body>
-</html>
+.section {
+  padding: var(--spacing-7) 0;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(212, 163, 115, 0.18);
+  color: var(--pine);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(243, 244, 246, 0.95);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) 0;
+  gap: var(--spacing-3);
+}
+
+.logo {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  color: var(--granite);
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) 0 var(--spacing-2);
+}
+
+.nav-menu.open {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  color: var(--granite);
+  font-size: 0.95rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--pine);
+  color: var(--mist);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  background: #15231f;
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background: var(--saddle);
+  color: var(--pine);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--pine);
+}
+
+.hero {
+  display: grid;
+  gap: var(--spacing-5);
+  align-items: center;
+}
+
+.hero-card {
+  background: var(--surface);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.hero-title {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.3rem);
+  margin-bottom: var(--spacing-3);
+}
+
+.hero-image {
+  background: linear-gradient(135deg, rgba(28, 46, 42, 0.75), rgba(212, 163, 115, 0.4)),
+    url("assets/hero-placeholder.svg");
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  min-height: 320px;
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: var(--spacing-3);
+}
+
+.section-lead {
+  color: var(--granite);
+  max-width: 680px;
+}
+
+.grid-3 {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+.card {
+  background: var(--surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.card h3 {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: var(--spacing-2);
+}
+
+.split {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: var(--spacing-3);
+}
+
+.prose {
+  display: grid;
+  gap: var(--spacing-3);
+  color: var(--granite);
+}
+
+.cta {
+  background: var(--pine);
+  color: var(--mist);
+  padding: var(--spacing-6) 0;
+}
+
+.cta-inner {
+  display: grid;
+  gap: var(--spacing-4);
+  align-items: center;
+}
+
+.cta .badge {
+  background: rgba(243, 244, 246, 0.2);
+  color: var(--mist);
+}
+
+.footer {
+  background: var(--surface);
+  padding: var(--spacing-6) 0 var(--spacing-4);
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: grid;
+  gap: var(--spacing-5);
+}
+
+.footer-title {
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+}
+
+.footer-bottom {
+  text-align: center;
+  color: var(--granite);
+  font-size: 0.9rem;
+  padding-top: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--spacing-4);
+    padding: 0;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: var(--spacing-4);
+  }
+
+  .hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cta-inner {
+    grid-template-columns: 2fr 1fr;
+  }
+}
