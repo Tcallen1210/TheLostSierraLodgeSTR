@@ -43,7 +43,7 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='820' height='420' viewBox='0 0 820 420'%3E%3Cg fill='none' stroke='rgba(74,85,104,0.08)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M40 320 L180 210 L320 320 L430 240 L560 340 L680 260 L780 320'/%3E%3Cpath d='M120 320 L120 280 L135 320 M160 320 L160 285 L175 320 M220 320 L220 275 L235 320 M270 320 L270 285 L285 320 M340 320 L340 275 L355 320 M400 320 L400 285 L415 320 M470 320 L470 275 L485 320 M520 320 L520 285 L535 320 M600 320 L600 275 L615 320 M660 320 L660 285 L675 320 M720 320 L720 280 L735 320'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 740px;
-  opacity: 0.28;
+  opacity: 0.24;
   z-index: -1;
   pointer-events: none;
 }
@@ -221,6 +221,79 @@ img {
   box-shadow: var(--shadow);
 }
 
+.card summary {
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.card summary::-webkit-details-marker {
+  display: none;
+}
+
+.guide-content {
+  white-space: pre-line;
+  color: var(--granite);
+  margin-top: var(--spacing-3);
+}
+
+.guide-category {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+.category-header {
+  display: grid;
+  gap: var(--spacing-2);
+}
+
+.back-link {
+  color: var(--pine);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.back-link.bottom {
+  margin-top: var(--spacing-4);
+}
+
+.guide-link-card {
+  display: grid;
+  gap: var(--spacing-2);
+}
+
+.place-list {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+.place-card {
+  display: grid;
+  gap: var(--spacing-3);
+  align-items: start;
+}
+
+.place-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.place-content {
+  display: grid;
+  gap: var(--spacing-2);
+}
+
+.place-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
 .split {
   display: grid;
   gap: var(--spacing-6);
@@ -302,6 +375,10 @@ img {
 
   .cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .place-card {
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
   }
 
   .split {
