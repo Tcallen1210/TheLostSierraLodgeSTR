@@ -1189,9 +1189,9 @@ img {
 /* Goal: shrink TOTAL sticky header height mostly by removing padding/gaps, NOT by shrinking fonts. */
 
 :root{
-  --header-pad-y: 0.42rem;      /* was ~1rem */
-  --header-gap: 0.65rem;        /* tighten spacing between elements */
-  --guidebar-pad-y: 0.22rem;    /* ribbon row padding */
+  --header-pad-y: 0.48rem;      /* was ~1rem */
+  --header-gap: 0.72rem;        /* tighten spacing between elements */
+  --guidebar-pad-y: 0.26rem;    /* ribbon row padding */
   --divider-alpha: 0.22;
 }
 
@@ -1235,11 +1235,11 @@ img {
 
 /* Book Now + Menu: reduce padding to reclaim height */
 .btn{
-  padding: 0.62rem 1.25rem !important; /* less vertical padding */
+  padding: 0.66rem 1.30rem !important; /* less vertical padding */
   line-height: 1.05 !important;
 }
 .navToggle{
-  padding: 0.42rem 0.78rem !important;
+  padding: 0.46rem 0.84rem !important;
   line-height: 1 !important;
 }
 
@@ -1302,3 +1302,20 @@ img {
 }
 
 /* ===== END FINAL HEADER COMPACT (PowerShell) ===== */
+
+
+
+/* ===== BEGIN GUIDE HERO TOP GAP FIX (PowerShell) ===== */
+/* Reduce the first hero section top padding on guide pages so content starts closer to the sticky header. */
+
+/* Modern browsers (Chromium) */
+body:has(.header .guide-subnav) main > section.section:first-of-type{
+  padding-top: 1.75rem !important;  /* was var(--spacing-7) (~4.5rem) */
+}
+
+/* Slightly tighten spacing between hero title/lead on guide pages */
+body:has(.header .guide-subnav) .hero-title{
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.7rem !important;
+}
+/* ===== END GUIDE HERO TOP GAP FIX (PowerShell) ===== */
