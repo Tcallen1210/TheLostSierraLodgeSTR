@@ -1080,8 +1080,8 @@ img {
 /* Tighten nav link vertical rhythm */
 .header .nav-links a {
   line-height: 1.1 !important;
-  padding-top: 0.15rem !important;
-  padding-bottom: 0.15rem !important;
+  padding-top: 0.172rem !important;
+  padding-bottom: 0.172rem !important;
 }
 
 /* Book Now pill shorter */
@@ -1093,7 +1093,7 @@ img {
 /* If your guide ribbon is inside the header, tighten it too */
 .header .guide-subnav {
   margin: 0 !important;
-  padding: 0.45rem 0 !important;  /* tighten ribbon row */
+  padding: 0.518rem 0 !important;  /* tighten ribbon row */
 }
 
 /* Reduce the vertical space around the divider line(s) */
@@ -1122,9 +1122,9 @@ img {
 
 /* Your markup uses .header > .container (not .header-inner), so target that */
 .header > .container {
-  padding-top: 0.85rem !important;   /* was ~1rem+ */
-  padding-bottom: 0.69rem !important;
-  row-gap: 0.55rem !important;       /* tighten the two stacked rows */
+  padding-top: 0.172rem !important;   /* was ~1rem+ */
+  padding-bottom: 0.172rem !important;
+  row-gap: 0.632rem !important;       /* tighten the two stacked rows */
 }
 
 /* If your header container is flex already, this is harmless; if not, it helps stacking */
@@ -1161,7 +1161,7 @@ img {
 /* Guide ribbon row inside sticky header */
 .header .guide-subnav {
   margin: 0 !important;
-  padding: 0.55rem 0 !important;
+  padding: 0.518rem 0 !important;
   font-size: 0.98rem !important;
   line-height: 1.2 !important;
 }
@@ -1170,8 +1170,8 @@ img {
 .header .guide-subnav a,
 .header .guide-subnav span,
 .header .guide-subnav li {
-  padding-top: 0.15rem !important;
-  padding-bottom: 0.15rem !important;
+  padding-top: 0.172rem !important;
+  padding-bottom: 0.172rem !important;
 }
 
 /* If you have any extra horizontal rule/line above the guide ribbon, hide it */
@@ -1310,7 +1310,7 @@ img {
 
 /* Modern browsers (Chromium) */
 body:has(.header .guide-subnav) main > section.section:first-of-type{
-  padding-top: 1.75rem !important;  /* was var(--spacing-7) (~4.5rem) */
+  padding-top: 0.172rem !important;  /* was var(--spacing-7) (~4.5rem) */
 }
 
 /* Slightly tighten spacing between hero title/lead on guide pages */
@@ -1319,3 +1319,48 @@ body:has(.header .guide-subnav) .hero-title{
   margin-bottom: 0.7rem !important;
 }
 /* ===== END GUIDE HERO TOP GAP FIX (PowerShell) ===== */
+
+
+
+/* ===== BEGIN LOGO + ALIGNMENT PATCH (PowerShell) ===== */
+
+/* 2) Site title ("The Lost Sierra Lodge") +25% */
+.logo {
+  font-size: 1.44rem !important;
+  line-height: 1.08 !important;
+}
+
+/* 3) Alignment polish: keep all header items vertically aligned */
+.header .container,
+.header .nav,
+.header .nav-links,
+.header .guide-subnav {
+  align-items: center !important;
+}
+
+/* Ensure top-row spacing doesn’t create “floating” baselines */
+.header .nav-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1.1 !important;
+}
+
+/* Ensure guide ribbon items align cleanly and start flush left */
+.header .guide-subnav {
+  justify-content: flex-start !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.header .guide-subnav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1.1 !important;
+}
+
+/* If any divider spans are taller/misaligned, normalize them */
+.header .guide-subnav .divider {
+  height: 16px !important;
+  transform: none !important;
+}
+
+/* ===== END LOGO + ALIGNMENT PATCH (PowerShell) ===== */
