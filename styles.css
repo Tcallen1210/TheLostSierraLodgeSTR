@@ -1122,9 +1122,9 @@ img {
 
 /* Your markup uses .header > .container (not .header-inner), so target that */
 .header > .container {
-  padding-top: 0.64rem !important;   /* was ~1rem+ */
-  padding-bottom: 0.52rem !important;
-  row-gap: 0.42rem !important;       /* tighten the two stacked rows */
+  padding-top: 0.74rem !important;   /* was ~1rem+ */
+  padding-bottom: 0.60rem !important;
+  row-gap: 0.48rem !important;       /* tighten the two stacked rows */
 }
 
 /* If your header container is flex already, this is harmless; if not, it helps stacking */
@@ -1161,7 +1161,7 @@ img {
 /* Guide ribbon row inside sticky header */
 .header .guide-subnav {
   margin: 0 !important;
-  padding: 0.42rem 0 !important;
+  padding: 0.48rem 0 !important;
   font-size: 0.98rem !important;
   line-height: 1.2 !important;
 }
