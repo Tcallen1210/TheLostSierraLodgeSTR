@@ -727,6 +727,7 @@ img {
 
 
 
+/* DISABLED (replaced by FINAL HEADER COMPACT)
 /* ===== BEGIN GUIDE DIVIDER NAV (PowerShell) ===== */
 .guide-subnav {
   display: flex;
@@ -774,9 +775,11 @@ img {
   border-radius: 999px;
 }
 /* ===== END GUIDE DIVIDER NAV (PowerShell) ===== */
+*/
 
 
 
+/* DISABLED (replaced by FINAL HEADER COMPACT)
 /* ===== BEGIN GUIDE TWO-ROW HEADER (PowerShell) ===== */
 
 /* Make the main header truly sticky */
@@ -905,7 +908,9 @@ img {
 }
 
 /* ===== END GUIDE TWO-ROW HEADER (PowerShell) ===== */
+*/
 
+/* DISABLED (replaced by FINAL HEADER COMPACT)
 /* ===== BEGIN GUIDE HEADER BAR PATCH (PowerShell) ===== */
 
 /* Make header a true 2-row sticky region */
@@ -971,7 +976,9 @@ img {
 }
 
 /* ===== END GUIDE HEADER BAR PATCH (PowerShell) ===== */
+*/
 
+/* DISABLED (replaced by FINAL HEADER COMPACT)
 /* ===== BEGIN STACKED GUIDE HEADER PATCH ===== */
 
 /* Make the whole sticky header stack shorter (top row + guide ribbon row) */
@@ -1049,7 +1056,9 @@ img {
 }
 
 /* ===== END STACKED GUIDE HEADER PATCH ===== */
+*/
 
+/* DISABLED (replaced by FINAL HEADER COMPACT)
 /* ===== BEGIN STICKY HEADER SHRINK PATCH ===== */
 
 /* Shrink the ENTIRE sticky header area (title + main nav + Book Now + guide ribbon) */
@@ -1099,9 +1108,11 @@ img {
 }
 
 /* ===== END STICKY HEADER SHRINK PATCH ===== */
+*/
 
 
 
+/* DISABLED (replaced by FINAL HEADER COMPACT)
 /* ===== BEGIN STICKY HEADER SHRINK (PowerShell) ===== */
 /* Goal: reduce total sticky header height (site row + guide row) by ~30% */
 
@@ -1170,3 +1181,124 @@ img {
 }
 
 /* ===== END STICKY HEADER SHRINK (PowerShell) ===== */
+*/
+
+
+
+/* ===== BEGIN FINAL HEADER COMPACT (PowerShell) ===== */
+/* Goal: shrink TOTAL sticky header height mostly by removing padding/gaps, NOT by shrinking fonts. */
+
+:root{
+  --header-pad-y: 0.42rem;      /* was ~1rem */
+  --header-gap: 0.65rem;        /* tighten spacing between elements */
+  --guidebar-pad-y: 0.22rem;    /* ribbon row padding */
+  --divider-alpha: 0.22;
+}
+
+/* Sticky header wrapper */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  padding: 0 !important;
+}
+
+/* Main header row (logo + nav/menu + book) */
+.header .container{
+  padding: var(--header-pad-y) 0 !important;
+  gap: var(--header-gap) !important;
+}
+
+/* Make sure guide pages that use a two-row stack stay stacked */
+.header.guide-header .container{
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+
+/* Tighten row1 padding (this is what creates the "empty space") */
+.header.guide-header .header-row1{
+  padding: var(--header-pad-y) 0 !important;
+  gap: 0.75rem !important;
+}
+
+/* Keep logo readable but reduce extra vertical space */
+.logo{
+  line-height: 1.05 !important;
+  margin: 0 !important;
+}
+
+/* Nav links: reduce vertical padding without shrinking font */
+.nav-links a{
+  padding: 0.10rem 0 !important;
+  line-height: 1.1 !important;
+}
+
+/* Book Now + Menu: reduce padding to reclaim height */
+.btn{
+  padding: 0.62rem 1.25rem !important; /* less vertical padding */
+  line-height: 1.05 !important;
+}
+.navToggle{
+  padding: 0.42rem 0.78rem !important;
+  line-height: 1 !important;
+}
+
+/* ---- Guide ribbon row (only one horizontal line: the bottom one) ---- */
+.header-guidebar,
+.header.guide-header .guide-ribbon{
+  border-top: 0 !important; /* remove the extra (red arrow) line */
+}
+
+/* If you are using .header-guidebar wrapper */
+.header-guidebar{
+  padding: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+/* If you are using .guide-ribbon row inside .guide-header */
+.header.guide-header .guide-ribbon{
+  padding: var(--guidebar-pad-y) 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+/* The actual guide subnav: make it slim */
+.guide-subnav{
+  margin: 0 !important;
+  padding: var(--guidebar-pad-y) 0 !important;
+  line-height: 1.1 !important;
+}
+
+/* Ensure NO literal | characters are displayed (only CSS divider line) */
+.guide-subnav{
+  letter-spacing: 0 !important;
+}
+
+/* Single sleek divider ONLY (no doubles) */
+.guide-subnav a{
+  border-right: 0 !important;
+  border-left: 0 !important;
+  margin: 0 !important;
+  padding: 0.08rem 0.55rem !important;
+}
+.guide-subnav a + a{
+  border-left: 1px solid rgba(74,85,104,var(--divider-alpha)) !important;
+  margin-left: 0.25rem !important;
+  padding-left: 0.75rem !important;
+}
+
+/* Active */
+.guide-subnav a[aria-current="page"]{
+  color: var(--pine) !important;
+  font-weight: 800 !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Make mobile scroll bar unobtrusive */
+.guide-subnav::-webkit-scrollbar{ height: 4px; }
+.guide-subnav::-webkit-scrollbar-thumb{
+  background: rgba(74,85,104,0.18);
+  border-radius: 999px;
+}
+
+/* ===== END FINAL HEADER COMPACT (PowerShell) ===== */
