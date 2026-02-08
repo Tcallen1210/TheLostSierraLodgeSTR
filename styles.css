@@ -727,80 +727,6 @@ img {
 
 
 
-/* ===== BEGIN HEADER/GUIDE PATCH (PowerShell) ===== */
-
-/* Make the site title ~20% larger (site-wide) */
-.logo {
-  font-size: 1.38rem;
-}
-
-/* Mobile-only header Book Now button (left of Menu) */
-.header-book {
-  margin-left: auto;
-}
-
-/* Book Now inverted colors: dark button, white text */
-.btn.btn-primary {
-  background: var(--pine);
-  color: var(--mist);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.btn.btn-primary:hover {
-  background: #15231f;
-  color: var(--mist);
-}
-
-/* Keep spacing tidy in header on mobile */
-.navToggle {
-  margin-left: 0.6rem;
-}
-
-/* Desktop: hide the mobile header-book, keep nav Book Now */
-@media (min-width: 768px) {
-  .header-book {
-    display: none;
-  }
-}
-
-/* Mobile: hide the Book Now inside the dropdown nav so you only see the header one */
-@media (max-width: 780px) {
-  .nav .btn {
-    display: none;
-  }
-}
-
-/* Guide chips spacing polish */
-.guide-subnav {
-  margin-top: 0.9rem;
-  margin-bottom: 0.8rem;
-  padding-bottom: 0.25rem;
-}
-
-/* Soften horizontal scrollbar look (Chromium/WebKit) */
-.guide-subnav::-webkit-scrollbar {
-  height: 8px;
-}
-
-.guide-subnav::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.guide-subnav::-webkit-scrollbar-thumb {
-  background: rgba(74, 85, 104, 0.25);
-  border-radius: 999px;
-}
-
-/* Tighten hero title spacing so chips sit closer to heading */
-.section .hero-title {
-  margin-bottom: 0.8rem;
-}
-
-/* ===== END HEADER/GUIDE PATCH (PowerShell) ===== */
-
-
-
-
 /* ===== BEGIN GUIDE DIVIDER NAV (PowerShell) ===== */
 .guide-subnav {
   display: flex;
@@ -979,3 +905,147 @@ img {
 }
 
 /* ===== END GUIDE TWO-ROW HEADER (PowerShell) ===== */
+
+/* ===== BEGIN GUIDE HEADER BAR PATCH (PowerShell) ===== */
+
+/* Make header a true 2-row sticky region */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* This is the second row that sits ON the horizontal line area */
+.header-guidebar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(245, 242, 236, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+/* Divider-style guide ribbon */
+.guide-subnav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0.65rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.guide-subnav a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--granite);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;
+}
+
+.guide-subnav a:hover,
+.guide-subnav a:focus-visible {
+  color: var(--pine);
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Sleek vertical dividers */
+.guide-subnav a + a {
+  border-left: 1px solid rgba(74, 85, 104, 0.25);
+  margin-left: 0.25rem;
+}
+
+/* Active state */
+.guide-subnav a[aria-current="page"] {
+  color: var(--pine);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Hide the horizontal scrollbar if possible (still scrollable) */
+.guide-subnav::-webkit-scrollbar {
+  height: 0px;
+}
+
+/* ===== END GUIDE HEADER BAR PATCH (PowerShell) ===== */
+
+/* ===== BEGIN STACKED GUIDE HEADER PATCH ===== */
+
+/* Make the whole sticky header stack shorter (top row + guide ribbon row) */
+.header{
+  padding: 0; /* ensure no extra vertical padding on wrapper */
+}
+
+/* Top header row: tighter padding */
+.header .header-inner{
+  padding: 0.55rem 0; /* reduce overall header height */
+}
+
+/* Logo slightly tighter line-height */
+.logo{
+  line-height: 1.1;
+}
+
+/* Book Now pill: slightly smaller */
+.btn.btn-primary{
+  padding: 0.70rem 1.35rem;
+  border-radius: 999px;
+}
+
+/* Guide ribbon row under header: keep ONLY the bottom line */
+.header-guidebar{
+  border-top: 0 !important; /* removes the extra (red arrow) line */
+  border-bottom: 1px solid var(--border) !important; /* keep only bottom line */
+  background: rgba(245, 242, 236, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+/* Ribbon: slimmer */
+.guide-subnav{
+  display:flex;
+  align-items:center;
+  gap:0;
+  overflow-x:auto;
+  white-space:nowrap;
+  padding: 0.30rem 0; /* shorter */
+  margin: 0;
+  line-height: 1.15;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Link spacing: tighter */
+.guide-subnav a{
+  display:inline-flex;
+  align-items:center;
+  padding: 0.10rem 0.55rem;
+  text-decoration:none;
+  color: var(--granite);
+  font-weight: 600;
+}
+
+/* Kill any old divider pseudo-elements (prevents double-divider) */
+.guide-subnav a::before,
+.guide-subnav a::after{
+  content: none !important;
+  border: 0 !important;
+}
+
+/* SINGLE sleek divider between items */
+.guide-subnav a + a{
+  border-left: 1px solid rgba(74,85,104,0.25);
+  margin-left: 0.25rem;
+  padding-left: 0.75rem;
+}
+
+/* Active state */
+.guide-subnav a[aria-current="page"]{
+  color: var(--pine);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ===== END STACKED GUIDE HEADER PATCH ===== */
